@@ -1,0 +1,134 @@
+$lightergrey: rgb(200,200,200);
+$lightgrey: rgb(155,155,155);
+$darkgrey: rgb(77,77,77);
+
+@mixin flex($justify, $align){
+  display:flex;
+  justify-content:$justify;
+  align-items:$align;
+}
+
+*{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+p {
+  color: $darkgrey;
+}
+
+.navbar {
+  height: 60px;
+  background-color: $lightergrey;
+  @include flex(center, center);
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.button {
+  background: $lightgrey;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid $darkgrey;
+  margin-left: auto;
+  margin-right: 10px;
+  @include flex(center, center);
+  transition: 300ms;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  &:active {
+    background: $darkgrey;
+    transform: scale(1);
+    transition: 100ms;
+  }
+}
+
+.contact{
+  @extend .button;
+
+  width:100px;
+  height:30px;
+
+  @include flex(center, center);
+}
+
+.section1{
+  @include flex(space-evenly, center);
+  padding:40px;
+}
+
+.text1{
+  max-width:500px;
+  margin-bottom: 100px;
+}
+
+.image1{
+  border-radius:15px;
+  max-width:400px;
+  width:100%;
+}
+
+.section2{
+  flex-direction: column;
+  @include flex(center, center);
+  background-color: $lightergrey;
+  padding-bottom: 20px;
+}
+
+.text2{
+  max-width:500px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image2{
+  border-radius:15px;
+  max-width:500px;
+  width:100%;
+}
+
+.projects{
+  text-align:center;
+  padding:40px;
+}
+
+.row{
+  @include flex(space-evenly, center);
+  margin-top:20px;
+  flex-wrap:wrap;
+  perspective:1000px;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  border-radius: 15px;
+  transform-style:preserve-3d;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+  will-change:transform;
+  &:hover{
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+}
+
+footer {
+  height: 60px;
+  background-color: $lightergrey;
+  @include flex(flex-start, center);
+  gap:50px;
+
+  .footertext2 {
+    color: $darkgrey;
+}
+
+}
+

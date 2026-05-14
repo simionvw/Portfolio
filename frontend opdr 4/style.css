@@ -1,0 +1,131 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: rgb(77, 77, 77);
+}
+
+.navbar {
+  height: 60px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.button, .contact {
+  background: rgb(155, 155, 155);
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid rgb(77, 77, 77);
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.button:hover, .contact:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.button:active, .contact:active {
+  background: rgb(77, 77, 77);
+  transform: scale(1);
+  transition: 100ms;
+}
+
+.contact {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+}
+
+.text1 {
+  max-width: 500px;
+  margin-bottom: 100px;
+}
+
+.image1 {
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.section2 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(200, 200, 200);
+  padding-bottom: 20px;
+}
+
+.text2 {
+  max-width: 500px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image2 {
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.projects {
+  text-align: center;
+  padding: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+.card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  height: 60px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+footer .footertext2 {
+  color: rgb(77, 77, 77);
+}/*# sourceMappingURL=style.css.map */
