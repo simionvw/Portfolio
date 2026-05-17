@@ -1,6 +1,8 @@
 $lightergrey: rgb(200,200,200);
 $lightgrey: rgb(155,155,155);
 $darkgrey: rgb(77,77,77);
+$spac:40px;
+$rad:15px;
 
 @mixin flex($justify, $align){
   display:flex;
@@ -60,7 +62,7 @@ p {
 
 .section1{
   @include flex(space-evenly, center);
-  padding:40px;
+  padding:$spac;
 }
 
 .text1{
@@ -69,7 +71,7 @@ p {
 }
 
 .image1{
-  border-radius:15px;
+  border-radius:$rad;
   max-width:400px;
   width:100%;
 }
@@ -88,14 +90,14 @@ p {
 }
 
 .image2{
-  border-radius:15px;
+  border-radius:$rad;
   max-width:500px;
   width:100%;
 }
 
 .projects{
   text-align:center;
-  padding:40px;
+  padding:$spac;
 }
 
 .row{
@@ -109,7 +111,7 @@ p {
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  border-radius: 15px;
+  border-radius: $rad;
   transform-style:preserve-3d;
   transition:
     transform 0.1s ease,
@@ -118,6 +120,9 @@ p {
   &:hover{
   box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
+  & img{
+    border-radius:$rad;
+  }
 }
 
 footer {
