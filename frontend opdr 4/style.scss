@@ -125,8 +125,13 @@ p {
   }
 }
 
-footer {
-  height: 60px;
+.contactfooter {
+  @extend .contact;
+}
+
+.footer {
+  min-height: 60px;
+  height: auto;
   background-color: $lightergrey;
   @include flex(flex-start, center);
   gap:50px;
@@ -137,3 +142,16 @@ footer {
 
 }
 
+@media (max-width:768px) {
+ .footer{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+  }
+
+  .contactfooter{
+    margin:0;
+    margin-bottom: 15px;
+  }
+
+}

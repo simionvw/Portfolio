@@ -21,7 +21,7 @@ p {
   margin-left: 10px;
 }
 
-.button, .contact {
+.button, .contact, .contactfooter {
   background: rgb(155, 155, 155);
   color: black;
   text-decoration: none;
@@ -34,17 +34,17 @@ p {
   align-items: center;
   transition: 300ms;
 }
-.button:hover, .contact:hover {
+.button:hover, .contact:hover, .contactfooter:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.button:active, .contact:active {
+.button:active, .contact:active, .contactfooter:active {
   background: rgb(77, 77, 77);
   transform: scale(1);
   transition: 100ms;
 }
 
-.contact {
+.contact, .contactfooter {
   width: 100px;
   height: 30px;
   display: flex;
@@ -117,15 +117,31 @@ p {
 .card:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
+.card img {
+  border-radius: 15px;
+}
 
-footer {
-  height: 60px;
+.footer {
+  min-height: 60px;
+  height: auto;
   background-color: rgb(200, 200, 200);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
 }
-footer .footertext2 {
+.footer .footertext2 {
   color: rgb(77, 77, 77);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .contactfooter {
+    margin: 0;
+    margin-bottom: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
