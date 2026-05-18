@@ -24,6 +24,21 @@ p {
   height: 60px;
   background-color: $lightergrey;
   @include flex(center, center);
+  gap: 15px;
+}
+
+.navintro {
+  color: $darkgrey;
+  text-decoration: none;
+  &:hover{
+    
+  }
+}
+.navovermij {
+  @extend .navintro;
+}
+.navprojects {
+  @extend .navintro;
 }
 
 .logo {
