@@ -20,6 +20,11 @@ p {
   color: $darkgrey;
 }
 
+.p2 {
+  line-height: 28px;
+  font-size: 18px;
+}
+
 .navbar {
   height: 60px;
   background-color: $lightergrey;
@@ -34,6 +39,9 @@ p {
   &:hover{
     color: black;
     scale: 1.1;
+  }
+  &:active{
+    scale: 1;
   }
 }
 .navovermij {
@@ -90,6 +98,7 @@ p {
 .image1{
   border-radius:$rad;
   max-width:400px;
+  height: 300px;
   width:100%;
 }
 
@@ -101,7 +110,7 @@ p {
 }
 
 .text2{
-  max-width:500px;
+  max-width:520px;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -144,6 +153,23 @@ p {
 
 .contactfooter {
   @extend .contact;
+} 
+
+#contactpopup{
+  position:fixed;
+  top:43%;
+  left:43%;
+  right: 50%;
+  bottom: 50%;
+  padding:20px;
+  border:none;
+  border-radius:$rad;
+  background:$lightergrey;
+  color:black;
+  box-shadow:0 0px 30px rgba(0,0,0,3);
+  &::backdrop{
+    background:rgba(0,0,0,0.4);
+  }
 }
 
 .footer {
