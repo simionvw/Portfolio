@@ -1,0 +1,196 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: rgb(77, 77, 77);
+}
+
+.p2 {
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.navbar {
+  height: 60px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.navintro, .navprojects, .navovermij {
+  color: rgb(77, 77, 77);
+  text-decoration: none;
+  transition: 200ms;
+}
+.navintro:hover, .navprojects:hover, .navovermij:hover {
+  color: black;
+  scale: 1.1;
+}
+.navintro:active, .navprojects:active, .navovermij:active {
+  scale: 1;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.button, .contact, .contactfooter {
+  background: rgb(155, 155, 155);
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid rgb(77, 77, 77);
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.button:hover, .contact:hover, .contactfooter:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.button:active, .contact:active, .contactfooter:active {
+  background: rgb(77, 77, 77);
+  transform: scale(1);
+  transition: 100ms;
+}
+
+.contact, .contactfooter {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+}
+
+.text1 {
+  max-width: 500px;
+  margin-bottom: 100px;
+}
+
+.image1 {
+  border-radius: 15px;
+  max-width: 400px;
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section1 .image1 {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.section2 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(200, 200, 200);
+  padding-bottom: 20px;
+}
+
+.text2 {
+  max-width: 520px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image2 {
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.projects {
+  text-align: center;
+  padding: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+.card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  border-radius: 15px;
+}
+
+#contactpopup {
+  position: fixed;
+  top: 43%;
+  left: 43%;
+  right: 50%;
+  bottom: 50%;
+  padding: 20px;
+  border: none;
+  line-height: 30px;
+  border-radius: 15px;
+  background: rgb(200, 200, 200);
+  color: black;
+  box-shadow: 0 0px 30px rgb(0, 0, 0);
+}
+#contactpopup::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+  min-height: 60px;
+  height: auto;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+.footer .footertext2 {
+  color: rgb(77, 77, 77);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .contactfooter {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

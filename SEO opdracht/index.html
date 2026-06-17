@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simon van Wegen Portfolio | Software Development Student</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio van Simon van Wegen, software development student uit Rotterdam. Bekijk projecten in webdevelopment, SQL en backend development.">
+    <meta name="keywords" content="portfolio, software developer, webdeveloper, sql, backend, student, rotterdam">
+    <meta name="author" content="Simon van Wegen">
+    <meta name="robots" content="index,follow">
+  </head>
+  <body>
+    <nav class="navbar">
+      <img class="logo" src="https://placehold.co/40?text=*&font=oswald" alt="placeholder logo 40x40 star shape">
+      <a href="#intro" class="navintro">Intro</a>
+      <a href="#over mij" class="navovermij">Over mij</a>
+      <a href="#projects" class="navprojects">Projects</a>
+      <button class="contact" popovertarget="contactpopup">Contact Me</button>
+      <dialog id="contactpopup" popover><strong>Contact info:</strong><br>Phone number: +31 657633154 <br>Email adress: simonfelixvanwegen@gmail.com</dialog>
+    </nav>
+
+    <section id="intro" class="section1">
+
+      <container class="text1">
+        <h1>My portfolio</h1>
+        <p class="p1" >This is my portfolio, this is where you will find my creations.</p>
+      </container>
+
+      <img src="https://iili.io/BycDWYX.png" class="image1" alt="wireframe of a online storefront">
+    </section>
+
+    <section id="over mij" class="section2">
+      <container class="text2">
+        <h1>About me</h1>
+        <p class="p2" >Hello, I'm Simon.<br>I'm an 18 year old software development student at Techniek College Rotterdam.<br>I have a HAVO diploma, and I'm currently doing MBO niveau 4.<br>This is what I've made so far, as of May 2026.</p>
+      </container>
+    </section>
+    <section id="projects" class="projects">
+        <h1>My projects</h1>
+
+        <container class="row">
+          <container class="card">
+            <img src="https://iili.io/By3a1hQ.png" class="image1" alt="designer page of a database in sql">
+            <p><strong>Designed complete online store sql structure</strong></p>
+          </container>
+          <container class="card">
+            <img src="https://iili.io/By3a0Tx.png" class="image1" alt="Backend webpage for online store">
+            <p><strong>Backend CRUD for online store</strong></p>
+          </container>
+        </container>
+
+        <container class="row">
+          <container class="card">
+            <img src="https://iili.io/By3aMCB.gif" class="image1" alt="frontend page of an order viewing page of an online store">
+            <p><strong>Frontend order viewer</strong> (no login system)</p>
+          </container>
+          <container class="card">
+            <img src="https://iili.io/By3NTrJ.png" class="image1" alt="screenshot of this portfolio website">
+            <p><strong>The page you are viewing now!</strong></p>
+          </container>
+        </container>
+
+    </section>
+
+    <footer class="footer">
+      <img class="logo" src="https://placehold.co/40?text=*&font=oswald" alt="placeholder logo 40x40 star shape">
+      <h2 class="footertext1">Simon van Wegen</h2>
+      <h3 class="footertext2">Portfolio voor Techniek College Rotterdam</h3>
+      <button class="contactfooter" popovertarget="contactpopup">Contact Me</button>
+      <dialog id="contactpopup" popover><strong>Contact info:</strong><br>Phone number: +31 657633154<br><br>Email adress: simonfelixvanwegen@gmail.com</dialog>
+    </footer>
+  </body>
+</html>
+
+<script>
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+
+  card.addEventListener("mousemove", (e) => {
+
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = -(y - centerY) / 10;
+    const rotateY = (x - centerX) / 10;
+
+    card.style.transform =
+      `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+  });
+
+  card.addEventListener("mouseleave", () => {
+
+    card.style.transform =
+      "rotateX(0deg) rotateY(0deg)";
+
+  });
+
+});
+
+</script>
