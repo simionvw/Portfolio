@@ -100,8 +100,9 @@ container {
 .contact{
   @extend .button;
 
-  width:100px;
-  height:30px;
+  width:140px;
+  height:40px;
+  font-size: medium;
 
   @include flex(center, center);
 }
@@ -128,11 +129,13 @@ container {
     flex-direction: column;
     align-items: center;
     text-align: center; 
-
-    .image1 {
-      width: 100%;       
-      max-width: 400px;  
-    }
+  }
+  .image1 {
+    height: auto;
+  }
+  .text2{
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
@@ -199,6 +202,7 @@ container {
   padding:20px;
   border:none;
   line-height: 30px;
+  font-size: large;
   border-radius:$rad;
   background:$lightergrey;
   color:black;
@@ -232,7 +236,6 @@ container {
     margin:0;
     margin-bottom: 15px;
   }
-
 }
 
 .image3{
